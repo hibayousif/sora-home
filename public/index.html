@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora Home | Bespoke Furniture Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================
+         NAVIGATION BAR - SPA Scroll Navigation
+         Developed by: Hiba Saeed
+    ============================================ -->
+    <nav class="main-nav">
+        <div class="logo">SORA HOME</div>
+        <ul class="menu">
+            <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+            <li><a href="#catalog" onclick="scrollToSection('catalog')">Catalog</a></li>
+            <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
+        </ul>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Main Landing View
+    ============================================ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-sub">Istanbul, Türkiye · Est. 2026</p>
+            <h1>Bespoke Luxury<br>Furniture</h1>
+            <p class="hero-desc">Where Artificial Intelligence meets authentic Turkish craftsmanship.<br>Every piece is engineered for you — and only you.</p>
+            <a href="#catalog" class="hero-btn" onclick="scrollToSection('catalog')">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CATALOG SECTION - Product Grid
+    ============================================ -->
+    <section id="catalog" class="catalog-section">
+        <div class="section-header">
+            <p class="section-sub">Handcrafted · AI-Verified · Sustainable</p>
+            <h2>Our Collection</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="container">
+            <div class="product-grid" id="product-grid">
+                <!-- Products injected by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT US SECTION - Project Vision
+    ============================================ -->
+    <section id="about" class="about-section">
+        <div class="about-inner">
+            <div class="about-text">
+                <p class="section-sub">Our Story</p>
+                <h2>The Future of Bespoke Living</h2>
+                <div class="divider" style="margin:1rem 0 1.5rem;"></div>
+                <p>At SORA HOME, we don't just sell furniture; we design unique living experiences where technology serves human creativity. We were founded with a vision to bridge the gap between advanced digital design and authentic manual craftsmanship.</p>
+                <h3>Our 2026 Technical Vision</h3>
+                <p>We utilize intelligent algorithms that allow you to customize furniture with absolute engineering precision, while maintaining strict sustainability standards to reduce carbon emissions for every piece we create.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <span class="feature-icon">🤖</span>
+                        <div>
+                            <strong>AI-Powered Design</strong>
+                            <p>Our system ensures the structural integrity of your design before production even begins.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <span class="feature-icon">🪵</span>
+                        <div>
+                            <strong>Authentic Artisan Craftsmanship</strong>
+                            <p>Once your design is approved, it is directly linked to elite local artisans who transform raw wood into a masterpiece.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <span class="feature-icon">🌿</span>
+                        <div>
+                            <strong>Commitment to Sustainability</strong>
+                            <p>Luxury should not come at the planet's expense. We follow rigorous methodology in selecting sustainable wood.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-stat"><span>4+</span><p>Artisan Workshops</p></div>
+                <div class="about-stat"><span>100%</span><p>Bespoke Orders</p></div>
+                <div class="about-stat"><span>20+</span><p>Years AI-Guaranteed</p></div>
+                <div class="about-stat"><span>0</span><p>Mass Production</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ORDER MODAL - Artisan Matching Pipeline
+         Simulates the AI-to-Workshop routing system
+    ============================================ -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <!-- Step 1: Loading / Processing -->
+            <div id="loading-state">
+                <div class="modal-icon">⚙️</div>
+                <h3>Processing Bespoke Order</h3>
+                <p id="status-msg">Accessing Sora Database...</p>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                <div class="spinner"></div>
+            </div>
+            <!-- Step 2: Artisan Match Result -->
+            <div id="success-state" style="display:none;">
+                <div class="artisan-card">
+                    <div class="artisan-avatar" id="artisan-avatar"></div>
+                    <div class="artisan-info">
+                        <p class="artisan-label">Matched Artisan Workshop</p>
+                        <h3 id="artisan-name"></h3>
+                        <p id="artisan-location">📍 <span id="artisan-loc"></span></p>
+                        <p id="artisan-reason"></p>
+                    </div>
+                </div>
+                <div class="track-box">
+                    <p>✅ Order Confirmed!</p>
+                    <p><strong>Tracking ID:</strong> <span id="track-num"></span></p>
+                </div>
+                <button class="btn-close" onclick="closeModal()">Complete Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <p>SORA HOME 2026 | Created by Hiba Saeed · Student ID: 210513539</p>
+        <p style="font-size:0.75rem; margin-top:0.3rem; opacity:0.5;">Altınbaş University · Software Engineering Department</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
